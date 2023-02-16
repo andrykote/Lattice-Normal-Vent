@@ -1,0 +1,290 @@
+.lattice-container
+  max-width: 1320px
+  margin: 0 auto
+
+.lattice-box
+  display: flex
+  gap: 48px
+  padding-bottom: 64px
+  border-bottom: 1px solid rgba(82, 91, 103, 0.24)
+  font-family: "Open Sans", sans-serif
+
+.lattice-img-box
+  display: flex
+  align-items: stretch
+
+.lattice-little-box
+  display: flex
+  flex-direction: column
+  margin-right: 16px
+  gap: 16px
+
+.active-border
+  border: 2px solid var(--hover-bgc)
+
+.lattice-little-img
+  max-width: 64px
+  object-fit: cover
+
+.lattice-base-img
+  object-fit: cover
+  max-width: 520px
+  align-items: stretch
+
+.lattice-info-box
+  width: 100%
+
+.lattice-header
+  margin-bottom: 16px
+  font-weight: 700
+  font-size: 48px
+  line-height: 56px
+
+.lattice-price
+  margin-bottom: 32px
+  font-weight: 700
+  font-size: 48px
+  line-height: 52px
+  letter-spacing: -0.012em
+  color: var(--price-color)
+
+.lattice-size-box
+  display: flex
+  gap: 24px
+
+.selection-name
+  margin-bottom: 8px
+  font-weight: 700
+  font-size: 16px
+  line-height: 20px
+  color: var(--title-color)
+
+.selection
+  position: relative
+  font-family: "Open Sans", sans-serif
+  font-size: 16px
+  line-height: 24px
+
+  &-box
+    max-width: 300px
+    flex-grow: 1
+
+  &-header
+    position: relative
+    display: flex
+    align-items: center
+    padding: 16px 12px
+    margin-bottom: 8px
+    border: 1px solid #e4e4e7
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06)
+    border-radius: 2px
+    cursor: pointer
+    color: #525b67
+
+  &-header-svg
+    position: absolute
+    right: 16px
+
+  &-item:hover
+    background: var(--button-bgc)
+    color: #fbfefe
+
+.item-box
+  position: absolute
+  display: none
+  flex-direction: column
+  max-width: 100%
+  width: 100%
+  padding: 16px 12px
+  row-gap: 12px
+  border: 1px solid #e4e4e7
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06)
+  border-radius: 2px
+  background-color: #fff
+  cursor: pointer
+  z-index: 99
+
+.selection-item
+  padding: 8px 12px
+  border-radius: 2px
+
+.item-box--open
+  display: flex
+
+.color-text
+  margin-bottom: 8px
+  font-weight: 700
+  font-size: 16px
+  line-height: 22px
+  color: var(--title-color)
+
+.lettice-color-section
+  display: flex
+  column-gap: 8px
+  margin-bottom: 24px
+
+.lattice-color:first-child
+  border: 1px solid #525b67
+
+.lattice-color
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  border-radius: 2px
+  transition: all, 0.3s
+  cursor: pointer
+
+  &:hover
+    transform: scale(1.1)
+
+.amount-text
+  margin-bottom: 8px
+  font-weight: 700
+  font-size: 16px
+  line-height: 22px
+  color: var(--title-color)
+
+.amount
+  display: flex
+  max-width: fit-content
+  border: 1px solid #d8dae5
+  border-radius: 2px
+  margin-bottom: 40px
+
+.count
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: -0.5px
+  color: #051b44
+
+  &-value
+    width: 58px
+
+.count-minus,
+.count-plus
+  font-weight: 600
+  background-color: #d8dae5
+
+.count-minus:hover,
+.count-plus:hover
+  background-color: var(--hover-bgc)
+  cursor: pointer
+  color: var(--button-color)
+
+.count-minus:active,
+.count-plus:active
+  background-color: var(--active-bgc)
+  color: var(--button-color)
+
+.lattice-price-box
+  display: flex
+  column-gap: 32px
+
+.littice-button
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 183px
+  height: 52px
+  column-gap: 12px
+  padding: 16px 24px
+
+.price-text
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
+  color: #525b67b3
+
+@media (max-width: 1080px)
+  .lattice-box
+    flex-direction: column
+    padding-bottom: 40px
+
+  .lattice-base-img
+    flex-grow: 1
+    max-width: 640px
+    object-fit: cover
+
+  .lattice-img-box
+    margin-right: 0
+    margin-bottom: 32px
+
+  .lattice-header
+    font-size: 40px
+    line-height: 48px
+    margin-bottom: 24px
+
+  .lattice-price
+    font-size: 48px
+    line-height: 52px
+
+  .lettice-color-section
+    margin-bottom: 16px
+
+  .amount
+    margin-bottom: 24px
+
+  .lattice-box
+    border-bottom: none
+
+@media (max-width: 625px)
+  .card-color
+    display: none
+  
+  .lattice-img-box
+    flex-direction: column
+    width: 100%
+    height: 100%
+    margin-bottom: 24px
+
+  .lattice-little-box
+    flex-direction: row
+    order: 1
+    margin: 0
+    width: 100%
+    overflow-x: auto
+
+  .lattice-base-img
+    margin-bottom: 16px
+
+  .lattice-size-box
+    flex-direction: column
+
+  .lattice-header
+    font-size: 36px
+    line-height: 40px
+    margin-bottom: 16px
+
+  .lattice-price
+    font-size: 32px
+    line-height: 40px
+    margin-bottom: 24px
+
+  .selection-box,
+  .item-box
+    max-width: 328px
+
+  .lattice-size-box
+    row-gap: 16px
+    margin-bottom: 8px
+
+  .lattice-price-box
+    flex-direction: column
+
+  .littice-button
+    width: 100%
+    max-width: 328px
+    margin-bottom: 12px
+  
+  .price-text
+    row-gap: 8px

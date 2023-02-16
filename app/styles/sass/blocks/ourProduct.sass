@@ -1,0 +1,21 @@
+.our-product
+  padding-top: 96px
+
+  &-card-box
+    display: flex
+    flex-wrap: wrap
+    column-gap: 24px
+    font-family: "Open Sans", sans-serif
+
+  @media (max-width: 1080px)
+  .our-product-card
+    min-width: 224px
+
+    &:last-child
+      display: none
+
+@media (max-width: 625px)
+  .our-product-card-box
+    flex-direction: column
+    row-gap: 12px
+    margin-bottom: 40px

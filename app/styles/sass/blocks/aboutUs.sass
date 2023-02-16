@@ -1,0 +1,97 @@
+.about
+  display: flex
+  align-items: start
+
+  &-header
+    font-size: 40px
+    line-height: 48px
+    margin-bottom: 24px
+    color: var(--title-color)
+
+  &-sertificate
+    margin-right: 40px
+    object-fit: none
+
+  &-text-box
+    display: flex
+    flex-direction: column
+    font-family: "Open Sans"
+    font-size: 16px
+    line-height: 24px
+    color: var(--dark-font)
+
+  &-text-box p
+    margin-bottom: 24px
+
+  &-text-box p:last-child
+    margin-bottom: 24px
+
+  &-list
+    margin-bottom: 16px
+
+  &-list
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    max-height: 104px
+
+  &-list li
+    display: flex
+    align-items: center
+    margin-bottom: 8px
+    list-style-type: none
+    font-size: 16px
+
+  &-list li::before
+    content: ""
+    height: 16px
+    width: 16px
+    background-image: url("../images/src/svg/list-arrow.svg")
+    margin-right: 8px
+
+@media (max-width: 1080px)
+  .about
+    flex-wrap: wrap-reverse
+    justify-content: center
+
+    &-sertificate
+      margin-right: 0
+
+    &-header
+      margin-bottom: 16px
+      font-size: 32px
+      line-height: 48px
+
+    &-text-box
+      font-size: 16px
+      line-height: 24px
+
+    &-text-box p
+      margin-bottom: 24px
+
+    &-list
+      max-height: 144px
+
+@media (max-width: 625px)
+  .about
+    margin-bottom: 40px
+
+    &-header
+      margin-bottom: 12px
+      font-size: 28px
+      line-height: 36px
+
+    &-text-box
+      font-size: 14px
+      line-height: 20px
+
+    &-text-box p
+      margin-bottom: 16px
+
+    &-list
+      max-height: 160px
+
+    &-list li
+      max-width: 46%
+      font-size: 14px
+      line-height: 16px

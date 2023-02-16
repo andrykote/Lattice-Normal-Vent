@@ -1,0 +1,111 @@
+.product
+  padding-top: 96px
+  padding-bottom: 100px
+
+  &-box
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    justify-content: space-between
+    row-gap: 32px
+
+  &__header
+    font-family: "Open Sans"
+    font-weight: 700
+    font-size: 36px
+    line-height: 40px
+    max-width: fit-content
+    margin-bottom: 40px
+
+  &__header::after
+    content: ""
+    display: block
+    width: 100%
+    height: 12px
+    background-color: var(--button-bgc)
+    margin-top: 12px
+
+  &-item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    min-width: calc((100% - 32px * 3) / 4)
+    padding: 40px 0px
+    border: 1px solid #e7eaec
+    border-radius: 2px
+    box-shadow: 0px 0px 2px rgba(33, 37, 41, 0.04), 0px 4px 8px rgba(41, 50, 65, 0.08)
+    cursor: pointer
+    transition: all 0.3s
+
+  &-item:hover
+    box-shadow: 0px 0px 2px rgba(238, 108, 77, 0.04), 0px 12px 24px rgba(238, 108, 77, 0.24)
+
+  &-item:hover .item-name
+    color: var(--hover-bgc)
+
+  &-item:active .item-name
+    color: var(--active-bgc)
+
+  &-item img
+    max-height: 100%
+
+.item-name
+  text-align: center
+  margin-bottom: 24px
+  max-width: 242px
+  font-family: "Open Sans"
+  font-weight: 700
+  font-size: 24px
+  line-height: 32px
+  transition: all 0.3s
+
+@media (max-width: 1080px)
+  .product-item
+    min-width: calc((100% - 24px * 2) / 3)
+
+@media (max-width: 880px)
+  .product
+    padding-top: 64px
+    padding-bottom: 64px
+
+    &__header
+      font-size: 32px
+      margin-bottom: 32px
+
+    &__header::after
+      height: 8px
+      margin-top: 8px
+
+    &-box
+      gap: 24px
+
+  .item-name
+    font-size: 18px
+    line-height: 24px
+
+@media (max-width: 768px)
+  .product-item
+    min-width: calc((100% - 24px) / 2)
+
+@media (max-width: 625px)
+  .product
+    padding-top: 40px
+    padding-bottom: 40px
+
+    &__header
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 24px
+
+    &-item
+      width: 46%
+      padding: 16px 8px
+
+  .item-name
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 12px
+
+  .product-item img
+    max-width: 100%

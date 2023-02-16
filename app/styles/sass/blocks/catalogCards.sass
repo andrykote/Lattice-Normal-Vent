@@ -1,0 +1,232 @@
+.catalog
+  font-family: "Open Sans"
+
+.catalog__header
+  margin-bottom: 40px
+  font-weight: 700
+  font-size: 48px
+  line-height: 56px
+  color: var(--title-color)
+
+.card-box
+  max-width: 1296px
+  display: flex
+  gap: 32px
+  flex-wrap: wrap
+  margin-bottom: 80px
+
+.card
+  display: flex
+  flex-direction: column
+  width: calc((100% - 96px) / 4)
+  box-shadow: 0px 0px 2px rgba(33, 37, 41, 0.04), 0px 4px 8px rgba(41, 50, 65, 0.08)
+  border-radius: 2px
+  font-size: 0
+  transition: all, 0.3s
+
+  &:hover
+    box-shadow: 0px 0px 2px rgba(238, 108, 77, 0.04), 0px 12px 24px rgba(238, 108, 77, 0.24)
+
+  &-info-box
+    display: flex
+    height: 100%
+    flex-direction: column
+    justify-content: space-between
+
+  &-link
+    margin-bottom: 16px
+
+  &__img
+    width: 100%
+    object-fit: cover
+
+  &-info
+    padding: 0 16px
+
+  &-name
+    display: inline-block
+    font-weight: 700
+    font-size: 20px
+    line-height: 24px
+    margin-bottom: 8px
+    transition: all, 0.3s
+
+  &-name:hover
+    color: var(--hover-bgc)
+
+  &-name:active
+    color: var(--active-bgc)
+
+  &__price-box
+    margin-bottom: 16px
+    font-size: 18px
+    line-height: 24px
+    color: var(--dark-font)
+
+  &__price
+    font-weight: 700
+    font-size: 18px
+    line-height: 24px
+    color: var(--price-color)
+
+  &-color
+    display: flex
+    column-gap: 8px
+    margin-bottom: 16px
+
+.item-color
+  width: 12px
+  height: 12px
+  border-radius: 50%
+
+  &:hover
+    cursor: pointer
+    transform: scale(1.2)
+
+.blue
+  background-color: #2563eb
+
+.yellow
+  background-color: #eab308
+
+.red
+  background-color: #ef4444
+
+.blue-gray
+  background-color: #334155
+
+.indigo
+  background-color: #6366f1
+
+.emerald
+  background-color: #059669
+
+.orange
+  background-color: #ea580c
+
+.card__button
+  width: 100%
+  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  column-gap: 12px
+  padding: 16px 0px
+  font-weight: 700
+  font-size: 16px
+  line-height: 20px
+  font-family: inherit
+  background-color: inherit
+  color: var(--title-color)
+  border: none
+  border-top: 1px solid #e7eaec
+  transition: all, 0.3s
+  cursor: pointer
+
+  & svg path
+    transition: all, 0.3s
+
+  &:hover
+    background-color: var(--hover-bgc)
+    color: var(--button-color)
+
+  &:hover svg path
+    fill: var(--button-color)
+
+  &:active
+    background-color: var(--active-bgc)
+    color: var(--button-color)
+
+  &:active svg path
+    fill: var(--button-color)
+
+.catalog__pagination
+  display: flex
+  width: max-content
+  margin: 0 auto
+  font-family: "Plus Jakarta Sans", sans-serif
+  margin-bottom: 40px
+  border: 1px solid #e7eaec
+  border-radius: 0px 2px 2px 0px
+
+.pagination-item
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 700
+  font-size: 14px
+  width: 40px
+  height: 40px
+  line-height: 22px
+  border-right: 1px solid #e7eaec
+
+  &:last-child
+    border: none
+
+.current-page
+  background-color: var(--button-bgc)
+  color: #fbfefe
+
+@media (max-width: 1024px)
+  .card-box
+    gap: 24px
+
+  .card
+    width: calc((100% - 48px) / 3)
+
+@media (max-width: 880px)
+  .catalog__header
+    margin-bottom: 32px
+
+  .card-box
+    margin-bottom: 40px
+
+  .card__img
+    min-height: 240px
+
+  .card-name
+    font-size: 20px
+    line-height: 24px
+
+@media (max-width: 625px)
+  .catalog
+    padding-top: 0px
+
+  .card-box
+    margin-bottom: 32px
+
+  .card
+    width: 100%
+    max-width: 100%
+    flex-direction: row
+    min-height: 0
+
+    &-info-box
+      width: 100%
+
+    &-info
+      padding: 0
+      width: 100%
+
+    &-name
+      margin-left: 8px
+      font-size: 16px
+      line-height: 20px
+
+    &__price-box
+      margin-left: 8px
+
+    &__price
+      font-size: 14px
+      line-height: 20px
+
+    &-link
+      margin-bottom: 0px
+
+    &__img
+      max-width: 120px
+      height: 100%
+      min-height: 0
+
+    &__button
+      padding: 10px 0px

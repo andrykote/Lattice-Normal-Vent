@@ -1,0 +1,98 @@
+
+:root
+  --header-color: #dae5eb
+  --title-color: #293241
+  --dark-font: #525b67
+  --button-bgc: #ee6c4d
+  --button-color: #fbfefe
+  --price-color: #4d84ee
+  --hover-bgc: #e9856d
+  --active-bgc: #b33c20
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: url($furl) format('woff2')
+
+@include font('Open Sans', normal, 400, '../fonts/OpenSans-Regular.woff2')
+@include font('Open Sans', normal, 600, '../fonts/OpenSans-SemiBold.woff2')
+@include font('Open Sans', normal, 700, '../fonts/OpenSans-Bold.woff2')
+@include font('Inter', normal, 400, '../fonts/Inter-Regular.woff2')
+@include font('Inter', normal, 500, '../fonts/Inter-Medium.woff2')
+@include font('Inter', normal, 700, '../fonts/Inter-Bold.woff2')
+@include font('Plus Jakarta Sans', normal, 700, '../fonts/PlusJakartaSans-Bold.woff2')
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+  color: inherit
+
+h1
+  font-family: "Open Sans"
+  font-style: normal
+  font-weight: 700
+  font-size: 48px
+  line-height: 56px
+  margin-bottom: 40px
+
+li
+  list-style-type: none
+
+.container
+  max-width: 1320px
+  margin: 0 auto
+
+.breadcrumbs
+  display: flex
+  align-items: stretch
+  column-gap: 8px
+  margin-bottom: 24px
+  font-family: "Open Sans"
+  font-size: 14px
+  line-height: 14px
+  color: var(--dark-font)
+
+  &-item::before
+    content: ""
+    display: inline-block
+    width: 12px
+    height: 11px
+    background-image: url("../images/src/svg/path-arrow.svg")
+    margin-right: 8px
+
+  &-item:first-child:before
+    display: none
+
+  &-item:last-child
+    margin-right: 0
+    font-weight: 700
+
+  &-item:hover
+    cursor: pointer
+    text-decoration: underline
+
+@media (max-width: 1320px)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+
+@media (max-width: 880px)
+  .container
+    padding-left: 24px
+    padding-right: 24px
+
+@media (max-width: 625px)
+  .container
+    padding-left: 16px
+    padding-right: 16px
+
+  .breadcrumbs
+    font-size: 12px
+    line-height: 14px
+    column-gap: 4px

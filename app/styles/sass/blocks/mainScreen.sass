@@ -1,0 +1,74 @@
+.first-screen-bg
+  background-image: url("../images/src/main.webp")
+  background-size: cover
+
+.first-screen
+  display: flex
+  justify-content: space-between
+  padding-top: 16px
+
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    max-width: 536px
+
+  &__text p
+    margin-bottom: 40px
+    font-family: "Open Sans"
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 32px
+    color: #fbfefecc
+
+  &__button
+    display: flex
+    align-items: center
+    justify-self: center
+    gap: 12px
+    max-width: 272px
+
+  &__header
+    font-family: "Open Sans", sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 64px
+    line-height: 72px
+    color: var(--button-color)
+    margin-bottom: 24px
+
+@media (max-width: 1080px)
+  .first-screen
+    position: relative
+    padding-top: 80px
+    padding-bottom: 80px
+    overflow: hidden
+
+  .img-man
+    position: absolute
+    height: 408px
+    bottom: 0
+    right: -96px
+
+@media (max-width: 880px)
+  .first-screen__text p
+    font-size: 16px
+    line-height: 24px
+    max-width: 389px
+
+  .first-screen__header
+    font-size: 44px
+    line-height: 52px
+
+@media (max-width: 625px)
+  .img-man
+    display: none
+    
+  .first-screen
+    padding-top: 40px
+    padding-bottom: 40px
+
+    &__header
+      font-size: 36px
+      line-height: 40px
