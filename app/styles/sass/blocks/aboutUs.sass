@@ -1,60 +1,106 @@
+.about-bgc
+  background-color: #BEDCFF
+
 .about
   display: flex
-  align-items: start
+  justify-content: space-between
+  align-items: center
+  padding: 80px 0px
 
   &-header
+    max-width: max-content
     font-size: 40px
     line-height: 48px
     margin-bottom: 24px
     color: var(--title-color)
 
-  &-sertificate
-    margin-right: 40px
-    object-fit: none
+  &-header:after
+    background-color: var(--button-bgc)
+    content: ""
+    display: block
+    height: 12px
+    margin-top: 12px
+    width: 100%
+
+  &-img-box
+    position: relative
+    z-index: 1
+    margin-right: 16px
+
+  &-img-box::after
+    content: ''
+    position: absolute
+    display: block
+    width: 50%
+    height: 66%
+    right: -16px
+    bottom: -16px
+    background-color: #0986DD
+    z-index: -1
+
+  &-build
+    max-height: 360px
+    object-fit: contain
+    font-size: 0
+    box-shadow: 0 0 2px gray, 0 2px 24px gray
 
   &-text-box
     display: flex
     flex-direction: column
+    max-width: 440px
     font-family: "Open Sans"
     font-size: 16px
     line-height: 24px
+    font-weight: 600
     color: var(--dark-font)
 
   &-text-box p
     margin-bottom: 24px
 
-  &-text-box p:last-child
-    margin-bottom: 24px
-
-  &-list
-    margin-bottom: 16px
-
-  &-list
+  &-button-box
     display: flex
-    flex-wrap: wrap
-    flex-direction: column
-    max-height: 104px
+    justify-content: space-between
 
-  &-list li
-    display: flex
-    align-items: center
-    margin-bottom: 8px
-    list-style-type: none
-    font-size: 16px
+    .button:first-child
+      margin-right: 20px
 
-  &-list li::before
-    content: ""
-    height: 16px
-    width: 16px
-    background-image: url("../images/src/svg/list-arrow.svg")
-    margin-right: 8px
+    .button
+      width: 100%
+
+  &-sertificate-button
+    background-color: #0886DD !important
+  &-sertificate-button:hover
+    background-color: #08538b !important
+
+.modal-sertificate
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  display: none
+  justify-content: center
+  align-items: center
+  background: rgba(251, 254, 254, 0.8)
+  backdrop-filter: blur(4px)
+  z-index: 999
+  overflow: hidden
+
+.modal-sertificate-open
+  display: flex
 
 @media (max-width: 1080px)
   .about
     flex-wrap: wrap-reverse
     justify-content: center
+    flex-direction: column
 
-    &-sertificate
+    &-img-box
+      order: -1
+      margin-bottom: 40px
+      margin-right: 0
+
+    &-build
       margin-right: 0
 
     &-header
@@ -72,10 +118,12 @@
     &-list
       max-height: 144px
 
+@media (max-width: 1080px)
+  .about
+    padding: 64px 0
+
 @media (max-width: 625px)
   .about
-    margin-bottom: 40px
-
     &-header
       margin-bottom: 12px
       font-size: 28px
@@ -88,10 +136,14 @@
     &-text-box p
       margin-bottom: 16px
 
-    &-list
-      max-height: 160px
+    &-build
+      max-width: 450px
+      width: 100%
 
-    &-list li
-      max-width: 46%
-      font-size: 14px
-      line-height: 16px
+    &-img-box::after
+      right: -8px
+      bottom: -8px
+
+  @media (max-width: 425px)
+    .about
+      padding: 40px 0

@@ -5,13 +5,14 @@ let amontBox = document.querySelector(".amount");
 let colorBox = document.querySelector(".lettice-color-section");
 let colorArr = document.querySelectorAll(".lattice-color");
 let imgContainer = document.querySelector(".lattice-img-box");
+let modalSertificateBox = document.querySelector(".modal-sertificate");
+let sertificateBtn = document.querySelector(".about-sertificate-button");
 
 // Burger
 burger?.addEventListener("click", () => {
   burger.classList.toggle("open");
   header.classList.toggle("modal-open");
   document.body.classList.toggle("noscroll");
-  console.log('click');
 });
 
 // Selection Size
@@ -83,3 +84,14 @@ function setItemValue({ target }) {
     selectionValue.textContent = target.getAttribute("value");
   }
 }
+
+// Open sertificate Photo Modal Window
+sertificateBtn?.addEventListener("click", ({ target }) => {
+  modalSertificateBox.classList.toggle("modal-sertificate-open");
+});
+
+modalSertificateBox.addEventListener("click", ({ target }) => {
+  if (!target.closest(".about-sertificate")) {
+    modalSertificateBox.classList.toggle("modal-sertificate-open");
+  }
+});

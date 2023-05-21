@@ -1,17 +1,18 @@
-.first-screen-bg
-  background-image: url("../images/src/main.webp")
-  background-size: cover
-
 .first-screen
   display: flex
-  justify-content: space-between
-  padding-top: 16px
+  align-items: center
+  justify-content: center
+  gap: 40px
+  background: linear-gradient(90deg, rgb(7, 135, 222), rgb(47, 97, 158) 77%)
+
+  &-container
+    padding: 20px
+    display: flex
+    justify-content: flex-end
 
   &__text
-    display: flex
-    flex-direction: column
-    justify-content: center
-    max-width: 536px
+    min-width: 350px
+    max-width: 640px
 
   &__text p
     margin-bottom: 40px
@@ -21,6 +22,8 @@
     font-size: 24px
     line-height: 32px
     color: #fbfefecc
+    padding-left: 32px
+    border-left: 3px solid #fff
 
   &__button
     display: flex
@@ -28,6 +31,13 @@
     justify-self: center
     gap: 12px
     max-width: 272px
+    background-color: var(--button-color)
+    color: #0C79CD
+
+  &__button:hover
+    background-color: #08538b
+    color: #fff
+    
 
   &__header
     font-family: "Open Sans", sans-serif
@@ -38,18 +48,39 @@
     color: var(--button-color)
     margin-bottom: 24px
 
+  &-image-box
+    position: relative
+
+  &-image-box::after
+    content: ""
+    position: absolute
+    left: 40px
+    top: 0
+    width: 140px
+    height: 100%
+    background-color: #fff
+    opacity: .6
+    clip-path: polygon(95% 0, 10% 50%, 95% 100%, 85% 100%, 0 50%, 85% 0)
+
+  &-image
+    width: 100%
+    object-fit: cover
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 15% 100%, 0% 50%)
+
+  &-container, &-image-box
+    flex: 1 0 0
+
 @media (max-width: 1080px)
   .first-screen
-    position: relative
-    padding-top: 80px
-    padding-bottom: 80px
-    overflow: hidden
+    flex-direction: column-reverse
+    padding-bottom: 40px
 
-  .img-man
-    position: absolute
-    height: 408px
-    bottom: 0
-    right: -96px
+    &-image
+      height: 100%
+      clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%)
+
+    &-image-box::after
+      display: none
 
 @media (max-width: 880px)
   .first-screen__text p
@@ -62,11 +93,7 @@
     line-height: 52px
 
 @media (max-width: 625px)
-  .img-man
-    display: none
-    
   .first-screen
-    padding-top: 40px
     padding-bottom: 40px
 
     &__header
