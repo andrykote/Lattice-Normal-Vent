@@ -86,7 +86,7 @@ function setItemValue({ target }) {
 }
 
 // Open sertificate Photo Modal Window
-sertificateBtn?.addEventListener("click", ({ target }) => {
+sertificateBtn?.addEventListener("click", () => {
   modalSertificateBox.classList.toggle("modal-sertificate-open");
 });
 
